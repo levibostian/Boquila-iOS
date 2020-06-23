@@ -1,6 +1,0 @@
-framework module Boquila {
-  umbrella header "Boquila-umbrella.h"
-
-  export *
-  module * { export * }
-}
