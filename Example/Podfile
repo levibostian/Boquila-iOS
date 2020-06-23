@@ -1,11 +1,13 @@
+platform :ios, '11.0'
 use_frameworks!
 
 target 'Boquila_Example' do
-  pod 'Boquila', :path => '../'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/RemoteConfig' 
+
+  pod 'Boquila/Firebase', :path => '../'
 
   target 'Boquila_Tests' do
-    inherit! :search_paths
-
-    
+    inherit! :search_paths    
   end
 end
