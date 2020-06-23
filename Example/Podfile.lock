@@ -1,0 +1,16 @@
+PODS:
+  - Boquila (0.1.0)
+
+DEPENDENCIES:
+  - Boquila (from `../`)
+
+EXTERNAL SOURCES:
+  Boquila:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Boquila: 07f193999afd72b44c7f41fa2a7be4986bd4ff05
+
+PODFILE CHECKSUM: faa8b65a2d84ba0f76887dffb6d634b29a45ce2e
+
+COCOAPODS: 1.9.3

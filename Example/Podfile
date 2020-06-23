@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Boquila_Example' do
+  pod 'Boquila', :path => '../'
+
+  target 'Boquila_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
