@@ -46,12 +46,14 @@ The `Boquila` pod on it's own is very boring. It doesn't really do anything at a
 | Title              | Description                                                                                 |
 --------------------------------------------------------------------------------------------------------------------
 | `Boquila/Firebase` | Use `Boquila` with [Firebase Remote Config](https://firebase.google.com/docs/remote-config) |
+| `Boquila/Testing`  | Set of utilities to use remote config in your unit, integration, and UI tests.              |
 
 # Getting started 
 
 To learn how to use `Boquila`, check out the documentation for each of the options you have installed. 
 
-* [Boquila/Firebase documentation](Boquila/Firebase/README.md)
+* [`Boquila/Firebase` documentation](Boquila/Firebase/README.md)
+* [`Boquila/Testing` documentation](Boquila/Testing/README.md)
 
 ## Example app
 
