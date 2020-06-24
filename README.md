@@ -46,12 +46,14 @@ The `Boquila` pod on it's own is very boring. It doesn't really do anything at a
 | Title              | Description                                                                                 |
 --------------------------------------------------------------------------------------------------------------------
 | `Boquila/Firebase` | Use `Boquila` with [Firebase Remote Config](https://firebase.google.com/docs/remote-config) |
+| `Boquila/Testing`  | Set of utilities to use remote config in your unit, integration, and UI tests.              |
 
 # Getting started 
 
 To learn how to use `Boquila`, check out the documentation for each of the options you have installed. 
 
-* [Boquila/Firebase documentation](Boquila/Firebase/README.md)
+* [`Boquila/Firebase` documentation](Boquila/Firebase/README.md)
+* [`Boquila/Testing` documentation](Boquila/Testing/README.md)
 
 ## Example app
 
@@ -62,11 +64,20 @@ To run the example app, follow these instructions:
 cd Example/
 pod install
 ```
-Then, open the Boquila workspace in XCode.  
+Then, open the Boquila workspace in XCode.   
 
 ## Contribute
 
 Boquila is open for pull requests. Check out the [list of issues](https://github.com/levibostian/Boquila/issues) for tasks planned out, if there are any. Check them out if you wish to contribute in that way.
+
+To be able to develop for Boquila, follow these steps:
+
+```
+cd Example/
+pod install
+
+./bootstrap-dev.sh
+```
 
 **Want to add features to Boquila?** Before you decide to take a bunch of time and add functionality to the library, please, [create an issue](https://github.com/levibostian/Boquila/issues/new) stating what you wish to add. This might save you some time in case your purpose does not fit well in the use cases of Boquila. Nothing is stopping you from making a fork of this library and making any changes you wish!
 

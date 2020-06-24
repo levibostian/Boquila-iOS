@@ -6,6 +6,7 @@ target 'Boquila_Example' do
   pod 'Firebase/RemoteConfig' 
 
   pod 'Boquila/Firebase', :path => '../'
+  pod 'Boquila/Testing', :path => '../'
 
   target 'Boquila_Tests' do
     inherit! :search_paths    
