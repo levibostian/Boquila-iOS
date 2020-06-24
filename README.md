@@ -52,6 +52,7 @@ The `Boquila` pod on it's own is very boring. It doesn't really do anything at a
 
 To learn how to use `Boquila`, check out the documentation for each of the options you have installed. 
 
+* [Plugins](Boquila/Core/Plugins.md)
 * [`Boquila/Firebase` documentation](Boquila/Firebase/README.md)
 * [`Boquila/Testing` documentation](Boquila/Testing/README.md)
 
