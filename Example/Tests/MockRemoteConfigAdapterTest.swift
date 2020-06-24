@@ -171,12 +171,11 @@ class MockRemoteConfigAdapterTest: XCTestCase {
         adapter.setValue(id: "id", value: givenOverride)
         
         // Then, when launching the app for UI testsing, you need to set launch environments using strings.
-        let valueOverridesString: String = try! jsonAdapter.toJson(adapter.valueOverrides).string!
+        let valueOverridesString: String = adapter.valueOverridesString
         
         // Then, when your app under test launches you will get the string from the launch environment. You then want to put that back into the app instance's mock adapter.
-        
         let appInstanceMockAdapter = MockRemoteConfigAdapter(jsonEncoder: jsonAdapter.encoder, jsonDecoder: jsonAdapter.decoder)
-        appInstanceMockAdapter.valueOverrides = try! jsonAdapter.fromJson(valueOverridesString.data(using: .utf8)!)
+        appInstanceMockAdapter.valueOverridesString = valueOverridesString
         
         XCTAssertEqual(appInstanceMockAdapter.valueOverrides.values, adapter.valueOverrides.values)
     }

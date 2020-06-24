@@ -37,12 +37,13 @@ let givenOverride = [1, 2, 3]
 adapter.setValue(id: "id", value: givenOverride)
         
 // Then, when launching the app for UI testing, you need to set launch environments using strings.
-let valueOverridesString: String = try! jsonAdapter.toJson(adapter.valueOverrides).string!
+let valueOverridesString: String = adapter.valueOverridesString
+XCUIApplication.launchEnvironment["remote_config"] = valueOverridesString
         
 // Then, when your app under test launches you will get the string from the launch environment. You then want to put that back into the app instance's mock adapter.
 let appInstanceMockAdapter = MockRemoteConfigAdapter(jsonEncoder: jsonAdapter.encoder, jsonDecoder: jsonAdapter.decoder)
-appInstanceMockAdapter.valueOverrides = try! jsonAdapter.fromJson(valueOverridesString.data(using: .utf8)!)
-
+let valueOverridesString = application.launchEnvironment["remote_config"]
+appInstanceMockAdapter.valueOverrides = valueOverridesString
 // Use dependency injection to inject `appInstanceMockAdapter` into your app. 
 
 // Now when your app under test in your UI tests tries to retrieve the remote config value with id "id", they will get your set value.

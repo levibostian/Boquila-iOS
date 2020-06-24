@@ -24,6 +24,15 @@ public class MockRemoteConfigAdapter: RemoteConfigAdapter {
     
     public var valueOverrides: ValueOverrides = ValueOverrides(values: [:])
     
+    public var valueOverridesString: String {
+        get {
+            try! self.jsonEncoder.encode(self.valueOverrides).string!
+        }
+        set {
+            self.valueOverrides = try! self.jsonDecoder.decode(ValueOverrides.self, from: newValue.data(using: .utf8)!)
+        }
+    }
+    
     public func setValue<T: Codable>(id: String, value: T) {
         let value = try! self.jsonEncoder.encode(value)
         
