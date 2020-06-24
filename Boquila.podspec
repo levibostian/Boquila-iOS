@@ -49,6 +49,11 @@ Pod::Spec.new do |s|
     ss.dependency 'Firebase/Analytics' # required by remote config
     ss.dependency 'Firebase/RemoteConfig'    
   end
+
+  s.subspec "Testing" do |ss|
+    ss.source_files = "Boquila/Testing/**/*"
+    ss.dependency "Boquila/Core"
+  end
   
   # s.resource_bundles = {
   #   'Boquila' => ['Boquila/Assets/*.png']

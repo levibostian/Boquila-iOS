@@ -12,9 +12,15 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		CB72F2C813960807EA0543E3 /* Pods_Boquila_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FD1B3421147BE1831D2A0A /* Pods_Boquila_Tests.framework */; };
 		F07C573BE434FBCA17238F4E /* Pods_Boquila_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8D2BA2ADD84A6E0C391D17 /* Pods_Boquila_Example.framework */; };
+		F7AF371824A3B0D700D3514F /* MockRemoteConfigAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF371724A3B0D700D3514F /* MockRemoteConfigAdapterTest.swift */; };
+		F7AF371A24A3B14100D3514F /* JSONAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF371924A3B14100D3514F /* JSONAdapter.swift */; };
+		F7AF371B24A3B14100D3514F /* JSONAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF371924A3B14100D3514F /* JSONAdapter.swift */; };
+		F7AF371D24A3B6B800D3514F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF371C24A3B6B800D3514F /* Extensions.swift */; };
+		F7AF371E24A3B6B800D3514F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF371C24A3B6B800D3514F /* Extensions.swift */; };
+		F7F172CF24A3BB46009B97CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7F172CE24A3BB46009B97CB /* GoogleService-Info.plist */; };
+		F7F172D024A3BB46009B97CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7F172CE24A3BB46009B97CB /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +45,16 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Boquila_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Boquila_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8A15106F4FD77B0E06A5F5C4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		96FD1B3421147BE1831D2A0A /* Pods_Boquila_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boquila_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A26A1973561AEAE836D8699 /* Pods-Boquila_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boquila_Example.release.xcconfig"; path = "Target Support Files/Pods-Boquila_Example/Pods-Boquila_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AC8D2BA2ADD84A6E0C391D17 /* Pods_Boquila_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boquila_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBDBCC9F110C5E694BC980D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E8FB2CFB944C462D32B8B7E7 /* Pods-Boquila_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boquila_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Boquila_Tests/Pods-Boquila_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7AF371724A3B0D700D3514F /* MockRemoteConfigAdapterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemoteConfigAdapterTest.swift; sourceTree = "<group>"; };
+		F7AF371924A3B14100D3514F /* JSONAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAdapter.swift; sourceTree = "<group>"; };
+		F7AF371C24A3B6B800D3514F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F7F172CE24A3BB46009B97CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FA448297A96FA92548F7E325 /* Pods-Boquila_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boquila_Example.debug.xcconfig"; path = "Target Support Files/Pods-Boquila_Example/Pods-Boquila_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,12 +122,15 @@
 		607FACD21AFB9204008FA782 /* Example for Boquila */ = {
 			isa = PBXGroup;
 			children = (
+				F7F172CE24A3BB46009B97CB /* GoogleService-Info.plist */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* FirebaseRemoteConfigExample.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				F7AF371924A3B14100D3514F /* JSONAdapter.swift */,
+				F7AF371C24A3B6B800D3514F /* Extensions.swift */,
 			);
 			name = "Example for Boquila";
 			path = Boquila;
@@ -135,7 +147,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				F7AF371624A3AE5100D3514F /* Testing */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -157,6 +169,14 @@
 				DFBDBCC9F110C5E694BC980D /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		F7AF371624A3AE5100D3514F /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				F7AF371724A3B0D700D3514F /* MockRemoteConfigAdapterTest.swift */,
+			);
+			name = Testing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				F7F172CF24A3BB46009B97CB /* GoogleService-Info.plist in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -255,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7F172D024A3BB46009B97CB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +359,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* FirebaseRemoteConfigExample.swift in Sources */,
+				F7AF371A24A3B14100D3514F /* JSONAdapter.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				F7AF371D24A3B6B800D3514F /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +369,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				F7AF371B24A3B14100D3514F /* JSONAdapter.swift in Sources */,
+				F7AF371824A3B0D700D3514F /* MockRemoteConfigAdapterTest.swift in Sources */,
+				F7AF371E24A3B6B800D3514F /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Boquila/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -503,6 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Boquila/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -525,6 +553,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -543,6 +572,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

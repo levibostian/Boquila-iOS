@@ -1,7 +1,11 @@
 PODS:
+  - Boquila/Core (0.1.0)
   - Boquila/Firebase (0.1.0):
+    - Boquila/Core
     - Firebase/Analytics
     - Firebase/RemoteConfig
+  - Boquila/Testing (0.1.0):
+    - Boquila/Core
   - Firebase/Analytics (6.27.0):
     - Firebase/Core
   - Firebase/Core (6.27.0):
@@ -83,6 +87,7 @@ PODS:
 
 DEPENDENCIES:
   - Boquila/Firebase (from `../`)
+  - Boquila/Testing (from `../`)
   - Firebase/Analytics
   - Firebase/RemoteConfig
 
@@ -108,7 +113,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Boquila: bdd0400d40bcef8cee3bf4e3ca17ef750cad8d84
+  Boquila: 9d1a6a3c72c61c902c3b0200a66c97b6262d5f41
   Firebase: fc4cbf6f1592636431821ef9a3c557e4dfd9f268
   FirebaseABTesting: b7f8b6c8c9398e98bb30c4195f697b5b73a330d0
   FirebaseAnalytics: 0ea640473474f036cabbc2576e20c2d63671c92f
@@ -124,6 +129,6 @@ SPEC CHECKSUMS:
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   Protobuf: 2793fcd0622a00b546c60e7cbbcc493e043e9bb9
 
-PODFILE CHECKSUM: 48aca96c8f3481fd5fc7c71470e7158af0967fc6
+PODFILE CHECKSUM: c347c17b3b76b9154b95e76efcc2917846669372
 
 COCOAPODS: 1.9.3

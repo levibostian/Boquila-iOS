@@ -10,6 +10,7 @@ podfile: Example/Podfile
 before_install:
   - gem install cocoapods
   - pod install --project-directory=Example
+  - ./bootstrap-dev.sh
 
 env:
   global:
@@ -17,8 +18,11 @@ env:
     # GITHUB_TOKEN - github user with collaborative status to repo. github token with push access to git repo. 
 
 jobs:
-  include:
-    - stage: push
+  include:  
+    - stage: tests
+      script: 
+        - cd Example && gem install fastlane && fastlane scan && cd ..
+    - stage: lint
       script: 
         # lint commits to make sure they are conventional 
         - nvm install lts/*; npm i @commitlint/travis-cli; npx commitlint-travis; 
@@ -32,8 +36,10 @@ jobs:
         - pod trunk push
 
 stages:
-  - name: push
-    if: type IN (push) AND tag IS blank   
+  - name: lint
+    if: type IN (push, pull_request) AND tag IS blank   
+  - name: tests
+    if: type IN (push, pull_request) AND tag IS blank   
   - name: deploy
     if: type IN (push) AND branch IN (master, beta, alpha)
   - name: pod-deploy
