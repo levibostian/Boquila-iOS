@@ -1,3 +1,10 @@
+# [1.0.0-alpha.2](https://github.com/levibostian/Boquila-iOS/compare/1.0.0-alpha.1...1.0.0-alpha.2) (2020-06-24)
+
+
+### Features
+
+* remove map parameter ([babf798](https://github.com/levibostian/Boquila-iOS/commit/babf7987521792f657ba1679b19c8d80db4cb6d5))
+
 # 1.0.0-alpha.1 (2020-06-23)
 
 
