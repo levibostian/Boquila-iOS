@@ -25,7 +25,7 @@ jobs:
     - stage: lint
       script: 
         # lint commits to make sure they are conventional 
-        - nvm install lts/*; npm i @commitlint/travis-cli; npx commitlint-travis; 
+        - nvm install lts/*; npm i @commitlint/cli @commitlint/config-conventional @commitlint/travis-cli; npx commitlint-travis; 
         - pod lib lint --allow-warnings
     - stage: deploy
       script: 

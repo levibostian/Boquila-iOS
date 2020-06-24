@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Levi Bostian' => 'levi.bostian@gmail.com' }
   s.source           = { :git => 'https://github.com/levibostian/Boquila-iOS.git', :tag => s.version.to_s }
   s.default_subspec = "Core"
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
   s.static_framework = true
 
   s.subspec "Core" do |ss|

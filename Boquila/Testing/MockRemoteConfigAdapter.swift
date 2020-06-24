@@ -46,7 +46,7 @@ public class MockRemoteConfigAdapter: RemoteConfigAdapter {
     public var getValueCalled: Bool {
         return getValueCallsCount > 0
     }
-    public func getValue<T: Codable>(id: String, map: ((String) -> String)?) -> T? {
+    public func getValue<T: Codable>(id: String) -> T? {
         guard let value = valueOverrides.values[id] else {
             return nil
         }

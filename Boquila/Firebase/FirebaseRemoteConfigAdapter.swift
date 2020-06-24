@@ -19,7 +19,7 @@ public class FirebaseRemoteConfigAdapter: RemoteConfigAdapter {
         }
     }
     
-    public func getValue<T>(id: String, map: ((String) -> String)? = nil) -> T? where T : Decodable, T : Encodable {
+    public func getValue<T>(id: String) -> T? where T : Decodable, T : Encodable {
         guard let stringValue = self.firebaseRemoteConfig[id].stringValue else {
             return nil
         }
@@ -36,10 +36,6 @@ public class FirebaseRemoteConfigAdapter: RemoteConfigAdapter {
             
             return nil
         }
-    }
-    
-    public func getValue<T>(id: String, defaultValue: T, map: ((String) -> String)? = nil) -> T where T : Decodable, T : Encodable {
-        self.getValue(id: id, map: map) ?? defaultValue
     }
     
     public func activate() {

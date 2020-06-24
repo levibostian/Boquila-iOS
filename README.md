@@ -64,7 +64,7 @@ To run the example app, follow these instructions:
 cd Example/
 pod install
 ```
-Then, open the Boquila workspace in XCode.  
+Then, open the Boquila workspace in XCode.   
 
 ## Contribute
 
