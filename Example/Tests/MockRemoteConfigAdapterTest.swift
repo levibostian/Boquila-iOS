@@ -18,7 +18,7 @@ class MockRemoteConfigAdapterTest: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        adapter = MockRemoteConfigAdapter(jsonEncoder: jsonAdapter.encoder, jsonDecoder: jsonAdapter.decoder)
+        adapter = MockRemoteConfigAdapter()
     }
     
     // MARK: - activate
@@ -110,7 +110,7 @@ class MockRemoteConfigAdapterTest: XCTestCase {
     // MARK: - setValue
     
     func test_setValue_givenNeverCalled_expectValueOverridesEmpty() {
-        XCTAssertEqual(adapter.valueOverrides.values, [:])
+        XCTAssertEqual(adapter.valueOverrides, [:])
     }
     
     func test_setValue_givenCallWithValue_expectValueOverridesContainsEntry() {
@@ -119,8 +119,8 @@ class MockRemoteConfigAdapterTest: XCTestCase {
         
         adapter.setValue(id: id, value: givenValue)
         
-        XCTAssertEqual(adapter.valueOverrides.values.keys.count, 1)
-        let actual: String = try! jsonAdapter.fromJson(adapter.valueOverrides.values[id]!)
+        XCTAssertEqual(adapter.valueOverrides.keys.count, 1)
+        let actual: String = adapter.valueOverrides[id]!
         XCTAssertEqual(givenValue, actual)
     }
     
@@ -132,8 +132,8 @@ class MockRemoteConfigAdapterTest: XCTestCase {
         adapter.setValue(id: id, value: oldValue)
         adapter.setValue(id: id, value: newValue)
         
-        XCTAssertEqual(adapter.valueOverrides.values.keys.count, 1)
-        let actual: String = try! jsonAdapter.fromJson(adapter.valueOverrides.values[id]!)
+        XCTAssertEqual(adapter.valueOverrides.keys.count, 1)
+        let actual: String = adapter.valueOverrides[id]!
         XCTAssertEqual(newValue, actual)
     }
     
@@ -141,9 +141,9 @@ class MockRemoteConfigAdapterTest: XCTestCase {
         adapter.setValue(id: "first", value: "first-value")
         adapter.setValue(id: "second", value: "second-value")
         
-        XCTAssertEqual(adapter.valueOverrides.values.keys.count, 2)
-        let actualFirstValue: String = try! jsonAdapter.fromJson(adapter.valueOverrides.values["first"]!)
-        let actualSecondValue: String = try! jsonAdapter.fromJson(adapter.valueOverrides.values["second"]!)
+        XCTAssertEqual(adapter.valueOverrides.keys.count, 2)
+        let actualFirstValue: String = adapter.valueOverrides["first"]!
+        let actualSecondValue: String = adapter.valueOverrides["second"]!
         XCTAssertEqual(actualFirstValue, "first-value")
         XCTAssertEqual(actualSecondValue, "second-value")
     }
@@ -151,33 +151,35 @@ class MockRemoteConfigAdapterTest: XCTestCase {
     // MARK: - valueOverrides
     
     func test_valueOverrides_givenNewInstance_expectEmpty() {
-        XCTAssertEqual(adapter.valueOverrides.values, [:])
+        XCTAssertEqual(adapter.valueOverrides, [:])
     }
     
     func test_valueOverrides_givenSet_expectValueSet() {
         let given = [
-            "id": "foo".data(using: .utf8)!
+            "id": "foo"
         ]
         
-        adapter.valueOverrides = MockRemoteConfigAdapter.ValueOverrides(values: given)
+        adapter.valueOverrides = given
         
-        XCTAssertEqual(adapter.valueOverrides.values, given)
+        XCTAssertEqual(adapter.valueOverrides, given)
     }
     
     // If you want to use the mock adapter with UI tests, you more then likely need to set the initial app state using strings. Let's make sure you can do that.
     func test_valueOverrides_assertCanGetAndSetFromString() {
+        let mockWithJsonAdapter = MockRemoteConfigAdapter(plugins: [JsonRemoteConfigAdapterPlugin()])
+        
         // In your UI tests, you can set values.
         let givenOverride = [1, 2, 3]
-        adapter.setValue(id: "id", value: givenOverride)
+        try! mockWithJsonAdapter.setValue(id: "id", value: givenOverride)
         
         // Then, when launching the app for UI testsing, you need to set launch environments using strings.
-        let valueOverridesString: String = adapter.valueOverridesString
+        let valueOverrides = adapter.valueOverrides
         
         // Then, when your app under test launches you will get the string from the launch environment. You then want to put that back into the app instance's mock adapter.
-        let appInstanceMockAdapter = MockRemoteConfigAdapter(jsonEncoder: jsonAdapter.encoder, jsonDecoder: jsonAdapter.decoder)
-        appInstanceMockAdapter.valueOverridesString = valueOverridesString
+        let appInstanceMockAdapter = MockRemoteConfigAdapter(plugins: [JsonRemoteConfigAdapterPlugin()])
+        appInstanceMockAdapter.valueOverrides = valueOverrides
         
-        XCTAssertEqual(appInstanceMockAdapter.valueOverrides.values, adapter.valueOverrides.values)
+        XCTAssertEqual(appInstanceMockAdapter.valueOverrides, adapter.valueOverrides)
     }
     
 }

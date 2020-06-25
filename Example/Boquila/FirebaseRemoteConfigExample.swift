@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         FirebaseApp.configure()
                 
         let firebaseRemoteConfig = RemoteConfig.remoteConfig()
-        let remoteConfigAdapter: RemoteConfigAdapter = FirebaseRemoteConfigAdapter(firebaseRemoteConfig: firebaseRemoteConfig)
+        let remoteConfigAdapter: RemoteConfigAdapter = FirebaseRemoteConfigAdapter(firebaseRemoteConfig: firebaseRemoteConfig, development: false, plugins: [])
         
         let optionalStringValue: String? = remoteConfigAdapter.getValue(id: "optional_string_value")
         let nonoptionalStringValue: String? = remoteConfigAdapter.getValue(id: "optional_string_value", defaultValue: "Default value")
