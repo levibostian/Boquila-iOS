@@ -36,15 +36,11 @@ public class JsonRemoteConfigAdapterPlugin: RemoteConfigAdapterPlugin {
         self.jsonDecoder = jsonDecoder
     }
     
-    public func transformValue<T: Codable>(_ value: Any) -> T? {
+    public func transformStringValue<T: Codable>(_ value: String) -> T? {
         guard let stringValue = value as? String else {
             return nil
         }
         if let delegate = self.delegate, !delegate.shouldTransformValue(stringValue: stringValue) {
-            return nil
-        }
-        
-        guard isValidJson(stringValue) else {
             return nil
         }
         
@@ -67,14 +63,6 @@ public class JsonRemoteConfigAdapterPlugin: RemoteConfigAdapterPlugin {
             
             return nil
         }
-    }
-    
-    func isValidJson(_ value: String) -> Bool {
-        guard let data = value.data(using: .utf8) else {
-            return false
-        }
-        
-        return JSONSerialization.isValidJSONObject(data)
     }
     
 }
