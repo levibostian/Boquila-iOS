@@ -1,3 +1,11 @@
+# [1.0.0-alpha.4](https://github.com/levibostian/Boquila-iOS/compare/1.0.0-alpha.3...1.0.0-alpha.4) (2020-07-29)
+
+
+### Bug Fixes
+
+* json plugin did not transform from string ([f5a6981](https://github.com/levibostian/Boquila-iOS/commit/f5a69812d6b0d7e00a1d9d5551629cdf436aeecd))
+* remove valid json check ([a9a77b8](https://github.com/levibostian/Boquila-iOS/commit/a9a77b8ee4070d69fbee4b09c2391a5ba2a3716f))
+
 # [1.0.0-alpha.3](https://github.com/levibostian/Boquila-iOS/compare/1.0.0-alpha.2...1.0.0-alpha.3) (2020-06-25)
 
 
