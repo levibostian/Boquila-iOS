@@ -44,10 +44,6 @@ public class JsonRemoteConfigAdapterPlugin: RemoteConfigAdapterPlugin {
             return nil
         }
         
-        guard isValidJson(stringValue) else {
-            return nil
-        }
-        
         do {
             return try jsonDecoder.decode(T.self, from: stringValue.data(using: .utf8)!)
         } catch let error {
@@ -67,14 +63,6 @@ public class JsonRemoteConfigAdapterPlugin: RemoteConfigAdapterPlugin {
             
             return nil
         }
-    }
-    
-    func isValidJson(_ value: String) -> Bool {
-        guard let data = value.data(using: .utf8) else {
-            return false
-        }
-        
-        return JSONSerialization.isValidJSONObject(data)
     }
     
 }
