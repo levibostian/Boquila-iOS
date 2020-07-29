@@ -36,7 +36,7 @@ public class JsonRemoteConfigAdapterPlugin: RemoteConfigAdapterPlugin {
         self.jsonDecoder = jsonDecoder
     }
     
-    public func transformValue<T: Codable>(_ value: Any) -> T? {
+    public func transformStringValue<T: Codable>(_ value: String) -> T? {
         guard let stringValue = value as? String else {
             return nil
         }
